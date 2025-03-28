@@ -7,14 +7,13 @@ app = Flask(__name__)
 
 
 
-
 @app.route('/')
 def dashboard():
-    return render_template('dashboard.html', plot_html=plot_html)
+    return render_template('dashboard.html')
 
-@app.route('/map')
+@app.route('/upload_report')
 def map_page():
-    return render_template('map.html')
+    return render_template('report_data.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
