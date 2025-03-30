@@ -1,0 +1,14 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Dashboard/uploads:/app/Dashboard/uploads
+      - ./Models:/app/Models
+
+    environment:
+      - FLASK_APP=Dashboard/app.py
+      - FLASK_ENV=production
+    restart: always
